@@ -1,0 +1,168 @@
+body {
+    background-color: grey
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+
+body {
+    background-color: #545454;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    padding: 30px
+}
+
+.div-table {
+    display: table;
+    width: 100%;
+    overflow: scroll;
+    background-color: #eee;
+    border-spacing: 2px;
+    border-radius: 4px
+}
+
+.trow {
+    display: table-row
+}
+
+.tcolumn {
+    display: table-cell;
+    vertical-align: top;
+    background-color: #fff;
+    padding: 10px 8px
+}
+
+.tcolumn1 {
+    width: 240px
+}
+
+.tcolumn4,
+.tcolumn5,
+.tcolumn6 {
+    width: 80px
+}
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+html,
+body {
+    height: 100%
+}
+
+* {
+    padding: 0px;
+    margin: 0px
+}
+
+body {
+    background-color: #dde3fb;
+    display: grid;
+    place-items: center
+}
+
+.card {
+    background-color: #222222;
+    border-radius: 10px;
+    font-family: 'Manrope', sans-serif
+}
+
+h6,
+p,
+form {
+    color: #bbbaba;
+    font-size: 0.9rem
+}
+
+.form-control {
+    background-color: #222222;
+    border: 1px solid #545454
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #222222;
+    border: 0px;
+    outline: 0
+}
+
+.btn {
+    background-color: #5b72d8;
+    border-radius: 4px;
+    border: 0px
+}
+
+.btn:focus,
+.btn:hover {
+    background-color: #6d84ea;
+    border: 0px;
+    outline: none;
+    box-shadow: none
+}
+
+*:focus {
+    outline: none
+}
+
+
+body {
+    background-color: #616161
+}
+
+.bg-black {
+    background-color: #000
+}
+
+.navbar-brand {
+    padding: 11px 20px
+}
+
+.active {
+    background-color: #fff;
+    color: #000 !important
+}
+
+.navbar-nav {
+    width: 100%
+}
+
+.nav-link {
+    color: inherit !important
+}
+
+.nav-item {
+    padding: 6px 20px;
+    color: #fff
+}
+
+.nav-item:hover {
+    background-color: #fff;
+    color: #000 !important
+}
+
+.right {
+    margin-left: auto
+}
+
+.navbar-collapse.collapse.in {
+    display: block !important
+}
+
+@media (max-width: 992px) {
+    .right {
+        margin-left: 0
+    }
+
+    .nav-item {
+        width: 100%
+    }
+}
+
+
+
+
+
