@@ -84,14 +84,14 @@ router.post('/post/delete', function (req, res) {
 
         console.log(obj)
 
-        xmlFileToJs('PaddysCafe.xml', function (err, result) {
+        xmlFileToJs('movieSchedule.xml', function (err, result) {
             if (err) throw (err);
             
             delete result.cafemenu.section[obj.section].entree[obj.entree];
 
             console.log(JSON.stringify(result, null, "  "));
 
-            jsToXmlFile('PaddysCafe.xml', result, function(err){
+            jsToXmlFile('movieSchedule.xml', result, function(err){
                 if (err) console.log(err);
             });
         });
