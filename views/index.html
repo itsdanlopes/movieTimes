@@ -8,11 +8,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Paddy's Cafe</title>
+    <title>Dublin Cinema</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/PaddysCafe.css" rel="stylesheet">
+    <link href="css/movieTimes.css" rel="stylesheet">
 
 </head>
 
@@ -21,7 +21,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Paddy's Cafe</a>
+            <a class="navbar-brand" href="#">Dublin Cinema</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -51,26 +51,30 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="mt-5">Welcome to Paddy's Cafe</h1>
-                <p class="lead">Select your entrees from the menu below</p>
+                <h1 class="mt-5">Welcome to Dublin Cinema</h1>
+                <p class="lead">Select one of the showings below:</p>
             </div>
-            <div id="results" class="col-lg-8 order-2 mb-5"></div>
-            <div class="col-lg-4 order-1">
+            <div id="results" class="col-lg-7 order-2 mb-5"></div>
+            <div class="col-lg-5 order-1">
                 <form enctype="application/json" action="/post/json" method="post">
                     <div class="form-group">
                         <select class="form-control" name="sec_n">
-                            <option value="0">Side Dishes</option>
-                            <option value="1">Breakfast</option>
-                            <option value="2">Lunch</option>
-                            <option value="3">Dinner</option>
+                            <option value="0">Drama</option>
+                            <option value="1">Comedy</option>
+                            <option value="2">Sci-Fi</option>
+                            <option value="3">Action</option>
+                            <option value="4">Super-Hero</option>
                         </select>
-                        <input class="form-control mt-3" type="text" name="item" placeholder="Item">
+                        <input class="form-control mt-3" type="text" name="name" placeholder="Name">
+                        <input class="form-control mt-3" type="text" name="time" placeholder="Showing Time">
+                        <input class="form-control mt-3" type="text" name="duration" placeholder="Duration">
+                        <input class="form-control mt-3" type="text" name="screen" placeholder="Screen Type">
                         <input class="form-control mt-3" type="text" name="price" placeholder="Price">
                         <button type="submit" class="btn btn-primary btn-block mt-3">Submit</button>
                     </div>
                 </form>
                 <button id="delete" class="btn btn-danger btn-block mt-3">Delete</button>
-                <p class="text-muted text-center">To delete an entree, click the required row first</p>
+                <p class="text-muted text-center">To delete a movie, click the required row first</p>
                 <form>
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -96,15 +100,12 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/table.js"></script>
-    <script src="js/PaddysCafe.js"></script>
+    <script src="js/movieTime.js"></script>
     <script>
         window.addEventListener("load", function() {
-            document.forms[1].txtBillAmt.value = calculateBill('menuTable');
+            document.forms[1].txtBillAmt.value = calculateBill('movieTable');
             document.querySelector("#calcBill").addEventListener("click", function() {
-                document.forms[1].txtBillAmt.value = calculateBill('menuTable');
-            });
-            document.querySelector("#showVeg").addEventListener("click", function() {
-                highlightVegetarian('menuTable', this.checked);
+                document.forms[1].txtBillAmt.value = calculateBill('movieTable');
             });
         });
     </script>

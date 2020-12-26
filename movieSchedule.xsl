@@ -1,36 +1,46 @@
 <?xml version="1.0" ?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+<xsl:output method="html" doctype-public="XSLT-compat" omit-xml-declaration="yes" encoding="UTF-8" indent="yes" />
     <xsl:template match="/">
-        <table id="menuTable" border="1" class="indent">
+        <table id="movieTable" border="1" class="indent">
             <thead>
                 <tr>
-                    <th colspan="3">Paddy's Cafe Menu</th>
+                    <th colspan="6">Dublin Cinema - Showing Time</th>
                 </tr>
                 <tr>
                     <th>Select</th>
-                    <th>Item</th>
+                    <th>Name</th>
+                    <th>Showing Time</th>
+                    <th>Duration</th>
+                    <th>Screen Type</th>
                     <th>Price</th>
                 </tr>
             </thead>
             <tbody>
-                <xsl:for-each select="/cafemenu/section">
+                <xsl:for-each select="/movies/movie">
                     <tr>
-                        <td colspan="3">
-                            <xsl:value-of select="@name" />
+                        <td colspan="6">
+                            <xsl:value-of select="@genre" />
                         </td>
                     </tr>
                     <xsl:for-each select="entree">
                         <tr>
-                            <xsl:attribute name="vegetarian">
-                                <xsl:value-of select="boolean(@vegetarian)" />
-                            </xsl:attribute>
                             <td align="center">
                                 <input name="item0" type="checkbox" />
                             </td>
                             <td>
-                                <xsl:value-of select="item" />
+                                <xsl:value-of select="name" />
                             </td>
-                            <td align="right">
+                            <td>
+                                <xsl:value-of select="time" />
+                            </td>
+                            <td>
+                                <xsl:value-of select="duration" />
+                            </td>
+                            <td>
+                                <xsl:value-of select="screen" />
+                            </td>
+                            <td>
                                 <xsl:value-of select="price" />
                             </td>
                         </tr>
