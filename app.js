@@ -49,6 +49,11 @@ router.get('/get/html', function(req, res) {
 
     var result = xsltProcess(doc, stylesheet); //This does our XSL Transformation
 
+        xmlFileToJs('movieSchedule.xml', function(err, result){
+        if (err) throw (err);
+        console.log(result);
+    });
+
     res.end(result.toString()); //Send the result back to the user, but convert to type string first
 
 });

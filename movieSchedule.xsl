@@ -17,28 +17,28 @@
                 </tr>
             </thead>
             <tbody>
-                <xsl:for-each select="/movies/movie">
+                <xsl:for-each select="/movies/title">
                     <tr>
                         <td colspan="6">
                             <xsl:value-of select="@genre" />
                         </td>
                     </tr>
-                    <xsl:for-each select="entree">
+                    <xsl:for-each select="movie">
                         <tr>
                             <td align="center">
-                                <input name="item0" type="checkbox" />
+                                <input name="item" type="checkbox" />
                             </td>
                             <td>
                                 <xsl:value-of select="name" />
                             </td>
                             <td>
-                                <xsl:value-of select="time" />
+                                <xsl:value-of select="showingTime" />
                             </td>
                             <td>
                                 <xsl:value-of select="duration" />
                             </td>
                             <td>
-                                <xsl:value-of select="screen" />
+                                <xsl:value-of select="screenType" />
                             </td>
                             <td>
                                 <xsl:value-of select="price" />

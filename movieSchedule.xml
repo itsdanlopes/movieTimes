@@ -1,74 +1,86 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <?xml-stylesheet type="text/xsl" href="movieSchedule.xsl" ?>
 <movies>
-    <movie genre= "action">
-        <name>Fast and Furious</name>
-        <showingTime>10:00</showingTime>
-        <duration>2h</duration>
-        <screenType>IMax</screenType>
-        <price>15</price>
-    </movie>
-    <movie genre= "action">
-        <name>Wonder Woman</name>
-        <showingTime>11:00</showingTime>
-        <duration>2h35m</duration>
-        <screenType>3D</screenType>
-        <price>12</price>
-    </movie>
-      <movie  genre= "comedy">
+    <title genre="action">
+        <movie>
+            <name>Fast and Furious</name>
+            <showingTime>10:00</showingTime>
+            <duration>2h</duration>
+            <screenType>IMax</screenType>
+            <price>15</price>
+        </movie>
+        <movie>
+            <name>Wonder Woman</name>
+            <showingTime>11:00</showingTime>
+            <duration>2h35m</duration>
+            <screenType>3D</screenType>
+            <price>12</price>
+        </movie>
+        <movie>
+            <name>Honest Thief</name>
+            <showingTime>9:00</showingTime>
+            <duration>1h39m</duration>
+            <screenType>2D</screenType>
+            <price>10</price>
+        </movie>
+        <movie>
+            <name>Skyfall</name>
+            <showingTime>16:00</showingTime>
+            <duration>2h24m</duration>
+            <screenType>2D</screenType>
+            <price>10</price>
+        </movie>
+        <movie>
+            <name>Taken</name>
+            <showingTime>15:30</showingTime>
+            <duration>1h33m</duration>
+            <screenType>Imax</screenType>
+            <price>15</price>
+        </movie>
+    </title>
+
+    <title genre="comedy">
+        <movie>
         <name>Home Alone</name>
         <showingTime>16:00</showingTime>
         <duration>1h43m</duration>
         <screenType>2D</screenType>
         <price>10</price>
     </movie>
-     <movie  genre= "super-hero">
+    </title>
+    <title genre="super-hero">
+        <movie>
         <name>Avengers Infinity War</name>
         <showingTime>15:00</showingTime>
         <duration>2h40m</duration>
         <screenType>IMax</screenType>
         <price>15</price>
     </movie>
-     <movie  genre= "action">
-        <name>Honest Thief</name>
-        <showingTime>9:00</showingTime>
-        <duration>1h39m</duration>
-        <screenType>2D</screenType>
-        <price>10</price>
-    </movie>
-     <movie  genre= "drama">
-        <name>The Raid</name>
-        <showingTime>22:00</showingTime>
-        <duration>1h42m</duration>
-        <screenType>3D</screenType>
-        <price>12</price>
-    </movie>
-     <movie  genre= "action">
-        <name>Skyfall</name>
-        <showingTime>16:00</showingTime>
-        <duration>2h24m</duration>
-        <screenType>2D</screenType>
-        <price>10</price>
-    </movie>
-     <movie  genre= "sci-fi">
-        <name>The Matrix</name>
-        <showingTime>11:30:00</showingTime>
-        <duration>2h30m</duration>
-        <screenType>3D</screenType>
-        <price>12</price>
-    </movie>
-     <movie  genre= "comedy">
-        <name>Minority Report</name>
-        <showingTime>16:00</showingTime>
-        <duration>2h26m</duration>
-        <screenType>2D</screenType>
-        <price>10</price>
-    </movie>
-     <movie  genre= "action">
-        <name>Taken</name>
-        <showingTime>15:30</showingTime>
-        <duration>1h33m</duration>
-        <screenType>Imax</screenType>
-        <price>15</price>
-    </movie>
+</title>t
+    <title genre="drama">
+        <movie>
+            <name>The Raid</name>
+            <showingTime>22:00</showingTime>
+            <duration>1h42m</duration>
+            <screenType>3D</screenType>
+            <price>12</price>
+        </movie>
+    </title>
+
+    <title genre="sci-fi">
+        <movie>
+            <name>The Matrix</name>
+            <showingTime>11:30:00</showingTime>
+            <duration>2h30m</duration>
+            <screenType>3D</screenType>
+            <price>12</price>
+        </movie>
+        <movie>
+            <name>Minority Report</name>
+            <showingTime>16:00</showingTime>
+            <duration>2h26m</duration>
+            <screenType>2D</screenType>
+            <price>10</price>
+        </movie>
+    </title>
 </movies>
