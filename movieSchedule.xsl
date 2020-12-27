@@ -10,10 +10,10 @@
                 <tr>
                     <th>Select</th>
                     <th>Name</th>
-                    <th>Showing Time</th>
+                    <th>Price</th>
                     <th>Duration</th>
                     <th>Screen Type</th>
-                    <th>Price</th>
+                    <th>Showing Time</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,7 +32,7 @@
                                 <xsl:value-of select="name" />
                             </td>
                             <td>
-                                <xsl:value-of select="showingTime" />
+                                <xsl:value-of select="price" />
                             </td>
                             <td>
                                 <xsl:value-of select="duration" />
@@ -41,7 +41,7 @@
                                 <xsl:value-of select="screenType" />
                             </td>
                             <td>
-                                <xsl:value-of select="price" />
+                                <xsl:value-of select="showingTime" />
                             </td>
                         </tr>
                     </xsl:for-each>

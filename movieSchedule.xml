@@ -70,7 +70,7 @@
     <title genre="sci-fi">
         <movie>
             <name>The Matrix</name>
-            <showingTime>11:30:00</showingTime>
+            <showingTime>11:30</showingTime>
             <duration>2h30m</duration>
             <screenType>3D</screenType>
             <price>12</price>
