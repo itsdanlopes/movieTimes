@@ -67,7 +67,7 @@ router.post('/post/json', function (req, res) {
         xmlFileToJs('movieSchedule.xml', function (err, result) {
             if (err) throw (err);
             
-            result.movies.movie[obj.sec_n].movie.push({'name': obj.name, 'price': obj.price, 'duration': obj.duration, 'screen': obj.screen, 'time': obj.time});
+            result.movies.title[obj.sec_n].movie.push({'name': obj.name, 'price': obj.price, 'duration': obj.duration, 'screen': obj.screen, 'time': obj.time});
 
             console.log(JSON.stringify(result, null, "  "));
 
@@ -92,7 +92,7 @@ router.post('/post/delete', function (req, res) {
         xmlFileToJs('movieSchedule.xml', function (err, result) {
             if (err) throw (err);
             
-            delete result.cafemenu.section[obj.section].entree[obj.entree];
+            delete result.movies.title[obj.title].movie[obj.movie];
 
             console.log(JSON.stringify(result, null, "  "));
 
