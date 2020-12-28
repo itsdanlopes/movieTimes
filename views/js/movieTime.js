@@ -1,5 +1,4 @@
-// returns a number that represents the sum of all the selected menu
-// item prices.
+// returns the sum of the price of every movie ticket selected
 function calculateBill(idMenuTable) {
     var fBillTotal = 0.0;
     var i = 0;

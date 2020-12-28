@@ -38,10 +38,10 @@
                                 <xsl:value-of select="duration" />
                             </td>
                             <td>
-                                <xsl:value-of select="screenType" />
+                                <xsl:value-of select="screen" />
                             </td>
                             <td>
-                                <xsl:value-of select="showingTime" />
+                                <xsl:value-of select="time" />
                             </td>
                         </tr>
                     </xsl:for-each>

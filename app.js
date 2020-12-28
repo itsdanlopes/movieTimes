@@ -67,7 +67,7 @@ router.post('/post/json', function (req, res) {
         xmlFileToJs('movieSchedule.xml', function (err, result) {
             if (err) throw (err);
             
-            result.movies.title[obj.sec_n].movie.push({'name': obj.name, 'price': obj.price, 'duration': obj.duration, 'screen': obj.screen, 'time': obj.time});
+            result.movies.title[obj.sec_n].movie.push({'name': obj.name, 'time': obj.time, 'duration': obj.duration, 'screen': obj.screen,'price': obj.price});
 
             console.log(JSON.stringify(result, null, "  "));
 
