@@ -29,13 +29,6 @@
       <screen>2D</screen>
       <price>10</price>
     </movie>
-    <movie>
-      <name>Taken</name>
-      <time>15:30</time>
-      <duration>1h33m</duration>
-      <screen>Imax</screen>
-      <price>15</price>
-    </movie>
   </title>
   <title genre="comedy">
     <movie>

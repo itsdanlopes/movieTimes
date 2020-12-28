@@ -20,17 +20,17 @@ function draw_table()
 
 function select_row()
 {
-	$("#menuTable tbody tr[id]").click(function ()
+	$("#movieTable tbody tr[id]").click(function ()
 	{
 		$(".selected").removeClass("selected");
 		$(this).addClass("selected");
-		var section = $(this).prevAll("tr").children("td[colspan='3']").length - 1;
+		var title = $(this).prevAll("tr").children("td[colspan='6']").length - 1;
 		var movie = $(this).attr("id") - 1;
-		delete_row(section, movie);
+		delete_row(title, movie);
 	})
 };
 
-function delete_row(sec, ent)
+function delete_row(tit, mov)
 {
 	$("#delete").click(function ()
 	{
@@ -40,8 +40,8 @@ function delete_row(sec, ent)
 			type: "POST",
 			data:
 			{
-				section: sec,
-				entree: ent
+				title: tit,
+				movie: mov
 			},
 			cache: false,
 			success: setTimeout(draw_table, 1000)

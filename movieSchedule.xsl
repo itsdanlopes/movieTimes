@@ -24,7 +24,7 @@
                         </td>
                     </tr>
                     <xsl:for-each select="movie">
-                        <tr>
+                        <tr id="{position()}">
                             <td align="center">
                                 <input name="item" type="checkbox" />
                             </td>
