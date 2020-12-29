@@ -16,13 +16,6 @@
       <price>12</price>
     </movie>
     <movie>
-      <name>Honest Thief</name>
-      <time>9:00</time>
-      <duration>1h39m</duration>
-      <screen>2D</screen>
-      <price>10</price>
-    </movie>
-    <movie>
       <name>Skyfall</name>
       <time>16:00</time>
       <duration>2h24m</duration>
@@ -40,10 +33,10 @@
     </movie>
     <movie>
       <name>Monster-in-law</name>
-      <price>10</price>
+      <time>10:00</time>
       <duration>1h42</duration>
       <screen>2D</screen>
-      <time>10:00</time>
+      <price>10</price>
     </movie>
   </title>
   <title genre="super-hero">
