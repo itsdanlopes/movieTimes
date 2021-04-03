@@ -41,7 +41,7 @@
   </title>
   <title genre="super-hero">
     <movie>
-      <name>Avengers Infinity War</name>
+      <name>{name: "Monster-in-law", genre: "comedy", price: 10, duration: "1h42min", screenType:"2D", showingTime: 10:00},</name>
       <time>15:00</time>
       <duration>2h40m</duration>
       <screen>IMax</screen>
