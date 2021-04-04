@@ -25,7 +25,12 @@ const createMovieSchema = async(database) => {
     }
 
     movieSchema = new database.Schema({
-        name: String
+        name: String,
+        genre: String,
+        price: Double,
+        duration: String,
+        screen: String,
+        showingTime: String
     }, {
         timestamps: true
     });
@@ -48,7 +53,15 @@ const getMovie = async() => {
 };
 
 const createMovie = async({
-    name
+
+    name,
+    genre,
+    price,
+    duration,
+    screen,
+    showingTime
+
+
 }) => {
     const database = await connectDatabase();
 
@@ -59,7 +72,12 @@ const createMovie = async({
     } = database.models;
 
     const movie = new Movie({
-        name
+        name,
+        genre,
+        price,
+        duration,
+        screen,
+        showingTime
     });
 
     return movie.save();
