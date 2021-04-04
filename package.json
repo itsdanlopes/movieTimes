@@ -1,27 +1,26 @@
 {
-  "name": "movietimes",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "dependencies": {
-    "express": "^4.17.1",
-    "mongoose": "^5.12.3",
-    "nodemon": "^2.0.7"
-  },
-  "devDependencies": {},
-  "scripts": {
-      "start": "node  ./src/index.js",
-      
-      "dev": "nodemon ./src/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dloppes/movieTimes.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dloppes/movieTimes/issues"
-  },
-  "homepage": "https://github.com/dloppes/movieTimes#readme"
+    "name": "movietimes",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "dependencies": {
+        "express": "^4.17.1",
+        "mongoose": "^5.12.3",
+        "nodemon": "^2.0.7"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "node  ./src/index.js",
+        "dev": "nodemon ./src/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dloppes/movieTimes.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dloppes/movieTimes/issues"
+    },
+    "homepage": "https://github.com/dloppes/movieTimes#readme"
 }
