@@ -86,7 +86,12 @@ const createMovie = async({
 const updateMovie = async({
     id
 }, {
-    name
+    name,
+    genre,
+    price,
+    duration,
+    screen,
+    showingTime
 }) => {
     const database = await connectDatabase();
 
@@ -99,7 +104,12 @@ const updateMovie = async({
     return Movie.update({
         _id: id
     }, {
-        name
+        name,
+        genre,
+        price,
+        duration,
+        screen,
+        showingTime
     });
 };
 
