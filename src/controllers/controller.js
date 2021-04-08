@@ -1,16 +1,12 @@
 const mongoose = require('mongoose');
 
-// const {
-//     MONGO: {
-//         SRV
-//     }
-// } = require('./../helper/settings');
+
 
 let database;
 let movieSchema;
 
 const connectDatabase = async() => {
-    database = database || mongoose.connect(SRV, {
+    database = database || mongoose.connect("mongodb+srv://cct:cctDublin@cluster0.n8rs0.mongodb.net/movieSchedule?retryWrites=true&w=majority", {
         useNewUrlParser: true,
         useUnifiedTopology: true
     });
@@ -27,7 +23,7 @@ const createMovieSchema = async(database) => {
     movieSchema = new database.Schema({
         name: String,
         genre: String,
-        price: Double,
+        price: Number,
         duration: String,
         screen: String,
         showingTime: String
