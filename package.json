@@ -13,6 +13,7 @@
     "scripts": {
         "start": "node -r ./src/index.js",
         "dev": "nodemon -r ./src/index.js"
+
     },
     "repository": {
         "type": "git",
