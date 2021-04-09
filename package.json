@@ -11,8 +11,8 @@
     },
     "devDependencies": {},
     "scripts": {
-        "start": "node  ./src/index.js",
-        "dev": "nodemon ./src/index.js"
+        "start": "node -r ./src/index.js",
+        "dev": "nodemon -r ./src/index.js"
     },
     "repository": {
         "type": "git",
