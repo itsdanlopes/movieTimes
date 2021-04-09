@@ -9,6 +9,7 @@
 *    
 *    The main structure for my project has been based on the code above made available by Mikhail.
 ***************************************************************************************/ -->
+
 <head>
 
     <meta charset="utf-8">
@@ -17,6 +18,11 @@
     <meta name="author" content="">
 
     <title>Dublin Cinema</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <script src="./repositories/crude.js" defer></script>
+    <script src="./js/actions.js" defer></script>
+
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -30,8 +36,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
             <a class="navbar-brand" href="#">Dublin Cinema</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -85,8 +90,7 @@
                                 <input type="checkbox" id="showVeg" aria-label="Checkbox for following text input">
                             </div>
                         </div>
-                        <input class="btn btn-block btn-secondary mt-2" type="button" name="btnCalcBill"
-                            value="Calculate Bill" id="calcBill">
+                        <input class="btn btn-block btn-secondary mt-2" type="button" name="btnCalcBill" value="Calculate Bill" id="calcBill">
                     </div>
                 </form>
             </div>
@@ -111,4 +115,4 @@
 
 </body>
 
-</html>
+</html
