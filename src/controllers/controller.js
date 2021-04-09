@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
+require("dotenv").config();
 
-
+let MONGO_CONNECTION = process.env.MONGO;
 
 let database;
 let movieSchema;
 
 const connectDatabase = async() => {
-    database = database || mongoose.connect("mongodb+srv://cct:cctDublin@cluster0.n8rs0.mongodb.net/movieSchedule?retryWrites=true&w=majority", {
+    database = database || mongoose.connect(MONGO_CONNECTION, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     });
