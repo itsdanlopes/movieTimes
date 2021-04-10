@@ -58,7 +58,61 @@
                 <h1 class="mt-5">Welcome to Dublin Cinema</h1>
                 <p class="lead">Select one of the showings below:</p>
             </div>
-            <div id="results" class="col-lg-7 order-2 mb-5"></div>
+            <!-- <div id="results" class="col-lg-7 order-2 mb-5"></div> -->
+
+            <!-- This table has to be populated with the information from database -->
+            <table id="movieTable" border="1" class="col-lg-7 order-2 mb-5">
+                <thead>
+                    <tr>
+                        <th colspan="6">Dublin Cinema - Showing Time</th>
+                    </tr>
+                    <tr>
+                        <th>Select</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Duration</th>
+                        <th>Screen Type</th>
+                        <th>Showing Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <xsl:for-each select="/movies/title">
+                        <tr>
+                            <td colspan="6">
+                                <xsl:value-of select="@genre" />
+                            </td>
+                        </tr>
+                        <xsl:for-each select="movie">
+                            <tr id="{position()}">
+                                <td align="center">
+                                    <input name="item" type="checkbox" />
+                                </td>
+                                <td>
+                                    <xsl:value-of select="name" />
+                                </td>
+                                <td>
+                                    <xsl:value-of select="price" />
+                                </td>
+                                <td>
+                                    <xsl:value-of select="duration" />
+                                </td>
+                                <td>
+                                    <xsl:value-of select="screen" />
+                                </td>
+                                <td>
+                                    <xsl:value-of select="time" />
+                                </td>
+                            </tr>
+                        </xsl:for-each>
+                    </xsl:for-each>
+                </tbody>
+            </table>
+
+
+
+
+
+
             <div class="col-lg-5 order-1">
                 <form enctype="application/json" action="/post/json" method="post">
                     <div class="form-group">
