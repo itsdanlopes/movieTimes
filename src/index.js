@@ -1,21 +1,45 @@
-const express = require('express');
-const cors = require('cors');
-const helmet = require('helmet');
-const compression = require('compression');
-const routes = require('./routes.js');
-const app = express();
+const listMovies = async() => {
 
+    const list = await listOfMovies();
+    const divList = document.getElementById("list-props");
 
-const port = process.env.PORT || 3000;
+    const listMovies = [];
+    list.forEach(element => { listMovies.push(element) });
 
-app.use(express.json());
-app.use(cors());
-app.use(helmet());
-app.use(compression());
-app.use(routes);
+    listMovies.forEach(item => {
+        const movie = createList(item);
+        divList.insertAdjacentHTML('afterbegin', movie);
+    });
+};
 
+function calculateBill() {
+    let values = document.getElementById("item");
 
+    console.log(values.length)
+    for (let i = 0; i < 10; i++) {
+        console.log(values[0].value)
+    }
+}
 
-app.get('/', (req, res) => res.json('Healthy check ok'));
+function insertMovie() {
+    const name = document.getElementById("name").value;
+    const genre = document.getElementById("genre").value;
+    const price = document.getElementById("price").value;
+    const duration = document.getElementById("duration").value;
+    const screen = document.getElementById("screen").value;
+    const showingTime = document.getElementById("showingTime").value;
 
-app.listen(port, () => console.log('App running on port ', port));
+    const movie = {
+        name: name,
+        genre: genre,
+        price: price,
+        duration: duration,
+        screen: screen,
+        showingTime: showingTime
+    }
+
+    //createMovie(movie);
+    location.reload();
+}
+
+listMovies();
