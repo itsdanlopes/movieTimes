@@ -1,8 +1,9 @@
 const listMovies = async() => {
 
-    const list = await listOfMovies();
+    const test = "test";
+    const list = await listOfMovies(test);
     const divList = document.getElementById("list-props");
-
+    console.log(list);
     const listMovies = [];
     list.forEach(element => { listMovies.push(element) });
 
@@ -38,7 +39,7 @@ function insertMovie() {
         showingTime: showingTime
     }
 
-    //createMovie(movie);
+    createMovie(movie);
     location.reload();
 }
 
