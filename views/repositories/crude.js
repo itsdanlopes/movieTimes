@@ -2,12 +2,10 @@ const defaultURL = 'https://movieschedule.herokuapp.com/';
 
 // const axios = require("axios");
 
-const listOfMovies = async(test) => {
+const listOfMovies = async() => {
 
     const URL = `${defaultURL}getMovie`;
     const movies = await axios.get(URL);
-    console.log(test);
-    console.log(movies.data);
     return movies.data;
 
 }
@@ -24,7 +22,10 @@ const createMovie = async(movie) => {
             screen: movie.screen,
             showingTime: movie.showingTime
         })
-        .then((res) => console.log(res))
+        .then((res) => {
+            console.log(res)
+            window.location.reload();
+        })
         .catch((error) => console.log(error))
 
 }
