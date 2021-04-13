@@ -33,7 +33,7 @@ function calculateBill() {
 
 
     }
-    console.log(totalPrice);
+    document.getElementById('total').value = totalPrice;
 
     return totalPrice;
 
