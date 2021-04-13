@@ -13,12 +13,52 @@ const listMovies = async() => {
 };
 
 function calculateBill() {
-    let values = document.getElementById("item");
+    //let values = document.getElementById("item");
+    var numberOfBoxesSelected = $('input:checkbox:checked').length;
 
-    console.log(values.length)
-    for (let i = 0; i < 10; i++) {
-        console.log(values[0].value)
+
+    const checkboxes = document.querySelectorAll(`input[type="checkBox"]:checked`);
+    let values = [];
+    checkboxes.forEach((checkbox) => {
+        values.push(checkbox.value);
+    });
+
+    var totalPrice = 0;
+
+    for (i = 0; i < values.length; i++) {
+
+        var currentValue = parseInt(values[i]);
+
+        totalPrice += currentValue;
+
+
     }
+    console.log(totalPrice);
+
+    return totalPrice;
+
+
+
+    // var myTable = document.getElementById('movieTable');
+    // var rowsLenght = myTable.rows.length;
+
+    // console.log(rowsLenght);
+
+    // for (i = 0; i < rowsLenght; i++) {
+    //     var oCells = myTable.rows.item(i).cells;
+    //     var columnLength = oCells.length
+
+
+    //     for (var j = 0; j < columnLength; j++) {
+
+    //         var cellValue = oCells.item(j).innerHTML;
+
+
+    //         console.log(cellValue);
+    //     }
+    // }
+
+
 }
 
 function insertMovie() {

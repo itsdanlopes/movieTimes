@@ -49,7 +49,7 @@ const createList = (list) => {
 
     return `
 			 <tr>
-			 <td><input name="${id}" type="checkbox" value=${price} id="item"/></td>
+			 <td><input name="${id}" type="checkBox" value=${price} id="item"/></td>
 			 <td >${list.name}</td>
 			 <td >${list.genre}</td>
 			 <td >${list.price}</td>
