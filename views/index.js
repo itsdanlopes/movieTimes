@@ -71,6 +71,8 @@ function deleteMoviesFunction() {
         deleteMovies(movieID);
 
 
+
+
     }
 
 
@@ -83,7 +85,6 @@ function updateMovieFunction() {
     checkboxes.forEach((checkbox) => {
         values.push(checkbox.name);
 
-
     });
 
     if (values.length > 1) {
@@ -92,12 +93,16 @@ function updateMovieFunction() {
 
     } else {
         var movieID = values[0];
+
         getMovieObject(movieID);
+
+
     }
-
-
-
-
 }
+
+
+
+
+
 
 listMovies();

@@ -26,4 +26,9 @@ routes.delete('/deleteMovie/:id', (req, res) => controller.deleteMovie(req.param
     .catch(error => console.error(error))
 );
 
+routes.get('/getSingleMovie/:id', (req, res) => controller.getSingleMovie(req.params)
+    .then(result => res.send(result))
+    .catch(error => console.error(error))
+);
+
 module.exports = routes;

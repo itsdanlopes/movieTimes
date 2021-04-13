@@ -126,9 +126,24 @@ const deleteMovie = async({
     });
 };
 
+const getSingleMovie = async({ id }) => {
+    const database = await connectDatabase();
+
+    await createMovieSchema(database);
+
+    const {
+        Movie
+    } = database.models;
+
+    const movie = Movie.findOne({ _id: id });
+
+    return movie;
+};
+
 module.exports = {
     getMovie,
     createMovie,
     updateMovie,
-    deleteMovie
+    deleteMovie,
+    getSingleMovie
 }

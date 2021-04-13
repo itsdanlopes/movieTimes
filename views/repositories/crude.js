@@ -44,9 +44,11 @@ const deleteMovies = async(movieID) => {
 
 const getMovieObject = async(movieID) => {
 
-    const URL = `${defaultURL}getMovie/?_id=${movieID}`;
-    const movies = await axios.get(URL);
     console.log(movieID);
+
+    var test = [];
+    const URL = `${defaultURL}getSingleMovie/${movieID}`;
+    const movies = await axios.get(URL);
     console.log(movies.data);
     return movies.data;
 
