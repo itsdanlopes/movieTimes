@@ -33,29 +33,6 @@ function calculateBill() {
     document.getElementById('total').value = totalPrice;
 
 
-
-
-
-    // var myTable = document.getElementById('movieTable');
-    // var rowsLenght = myTable.rows.length;
-
-    // console.log(rowsLenght);
-
-    // for (i = 0; i < rowsLenght; i++) {
-    //     var oCells = myTable.rows.item(i).cells;
-    //     var columnLength = oCells.length
-
-
-    //     for (var j = 0; j < columnLength; j++) {
-
-    //         var cellValue = oCells.item(j).innerHTML;
-
-
-    //         console.log(cellValue);
-    //     }
-    // }
-
-
 }
 
 function insertMovie() {
@@ -88,17 +65,37 @@ function deleteMoviesFunction() {
 
     });
 
-    var totalPrice = 0;
-
     for (i = 0; i < values.length; i++) {
 
         var movieID = values[i];
-
-        //call method that takes an integer as parameter and insert movieID in it
         deleteMovies(movieID);
 
 
     }
+
+
+}
+
+function updateMovieFunction() {
+
+    const checkboxes = document.querySelectorAll(`input[type="checkBox"]:checked`);
+    let values = [];
+    checkboxes.forEach((checkbox) => {
+        values.push(checkbox.name);
+
+
+    });
+
+    if (values.length > 1) {
+        alert("You are ONLY allowed to update one movie at a time!");
+        window.location.reload();
+
+    } else {
+        var movieID = values[0];
+        getMovieObject(movieID);
+    }
+
+
 
 
 }

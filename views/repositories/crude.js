@@ -29,18 +29,26 @@ const createMovie = async(movie) => {
         .catch((error) => console.log(error))
 
 }
-const deleteMovies = async(movieID) => {
-    const URL = `${defaultURL}deleteMovie`;
 
-    console.log(movieID);
-    axios.delete(URL, {
-            params: movieID
-        })
+const deleteMovies = async(movieID) => {
+    const URL = `${defaultURL}deleteMovie/${movieID}`;
+
+    axios.delete(URL)
         .then((res) => {
-            console.log(res)
+            console.log(res);
             window.location.reload();
-            console.log(movieID + " has been successfuly deleted from Database!");
         })
-        .catch((error) => console.log(error))
+        .catch((error) => console.log(error));
+
+}
+
+const getMovieObject = async(movieID) => {
+
+    const URL = `${defaultURL}getMovie/?_id=${movieID}`;
+    const movies = await axios.get(URL);
+    console.log(movieID);
+    console.log(movies.data);
+    return movies.data;
+
 
 }
