@@ -13,9 +13,6 @@ const listMovies = async() => {
 };
 
 function calculateBill() {
-    //let values = document.getElementById("item");
-    var numberOfBoxesSelected = $('input:checkbox:checked').length;
-
 
     const checkboxes = document.querySelectorAll(`input[type="checkBox"]:checked`);
     let values = [];
@@ -35,7 +32,7 @@ function calculateBill() {
     }
     document.getElementById('total').value = totalPrice;
 
-    return totalPrice;
+
 
 
 
@@ -79,6 +76,31 @@ function insertMovie() {
     }
 
     createMovie(movie);
+}
+
+function deleteMoviesFunction() {
+
+    const checkboxes = document.querySelectorAll(`input[type="checkBox"]:checked`);
+    let values = [];
+    checkboxes.forEach((checkbox) => {
+        values.push(checkbox.name);
+
+
+    });
+
+    var totalPrice = 0;
+
+    for (i = 0; i < values.length; i++) {
+
+        var movieID = values[i];
+
+        //call method that takes an integer as parameter and insert movieID in it
+        deleteMovies(movieID);
+
+
+    }
+
+
 }
 
 listMovies();
