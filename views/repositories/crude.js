@@ -42,12 +42,32 @@ const deleteMovies = async(movieID) => {
 
 }
 
-const getMovieObject = async(movieID) => {
+const getMovieByID = async(movieID) => {
 
     console.log(movieID);
     const URL = `${defaultURL}getSingleMovie/${movieID}`;
     const movie = await axios.get(URL);
     return movie.data;
 
+
+}
+
+const updateSelectedMovie = async(movie, movieID) => {
+    const URL = `${defaultURL}updateMovie/${movieID}`;
+    console.log(movie);
+    axios.update(URL, {
+            _id: movieID,
+            name: movie.name,
+            genre: movie.genre,
+            price: movie.price,
+            duration: movie.duration,
+            screen: movie.screen,
+            showingTime: movie.showingTime
+        })
+        .then((res) => {
+            console.log(res)
+            window.location.reload();
+        })
+        .catch((error) => console.log(error))
 
 }

@@ -78,7 +78,7 @@ function deleteMoviesFunction() {
 
 }
 
-async function updateMovieFunction() {
+async function getIDOfSelectedMovie() {
 
     const checkboxes = document.querySelectorAll(`input[type="checkBox"]:checked`);
     let values = [];
@@ -92,9 +92,11 @@ async function updateMovieFunction() {
         window.location.reload();
 
     } else {
-        var movieID = values[0];
+        let movieID = values[0];
 
-        let singleMovie = await getMovieObject(movieID);
+        let singleMovie = await getMovieByID(movieID);
+
+        alert("Please make sure Genre is selected before clicking Submit Changes");
 
         document.getElementById("name").value = singleMovie.name;
         document.getElementById("genre").value = singleMovie.genre;
@@ -103,8 +105,30 @@ async function updateMovieFunction() {
         document.getElementById("screen").value = singleMovie.screen;
         document.getElementById("showingTime").value = singleMovie.showingTime;
 
-
+        submitChanges(movieID);
     }
+}
+
+function submitChanges(movieID) {
+
+
+    const name = document.getElementById("name").value;
+    const genre = document.getElementById("genre").value;
+    const price = document.getElementById("price").value;
+    const duration = document.getElementById("duration").value;
+    const screen = document.getElementById("screen").value;
+    const showingTime = document.getElementById("showingTime").value;
+
+    const movie = {
+        name: name,
+        genre: genre,
+        price: price,
+        duration: duration,
+        screen: screen,
+        showingTime: showingTime
+    }
+
+    updateSelectedMovie(movie, movieID);
 }
 
 
