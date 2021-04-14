@@ -44,7 +44,7 @@ const deleteMovies = async(movieID) => {
 
 const getMovieByID = async(movieID) => {
 
-    console.log(movieID);
+
     const URL = `${defaultURL}getSingleMovie/${movieID}`;
     const movie = await axios.get(URL);
     return movie.data;
@@ -55,7 +55,7 @@ const getMovieByID = async(movieID) => {
 const updateSelectedMovie = async(movie, movieID) => {
     const URL = `${defaultURL}updateMovie/${movieID}`;
     console.log(movie);
-    axios.update(URL, {
+    axios.put(URL, {
             _id: movieID,
             name: movie.name,
             genre: movie.genre,

@@ -96,8 +96,6 @@ async function getIDOfSelectedMovie() {
 
         let singleMovie = await getMovieByID(movieID);
 
-        alert("Please make sure Genre is selected before clicking Submit Changes");
-
         document.getElementById("name").value = singleMovie.name;
         document.getElementById("genre").value = singleMovie.genre;
         document.getElementById("price").value = singleMovie.price;
@@ -105,12 +103,19 @@ async function getIDOfSelectedMovie() {
         document.getElementById("screen").value = singleMovie.screen;
         document.getElementById("showingTime").value = singleMovie.showingTime;
 
-        submitChanges(movieID);
     }
 }
 
-function submitChanges(movieID) {
+function submitChanges() {
 
+    const checkboxes = document.querySelectorAll(`input[type="checkBox"]:checked`);
+    let movieID = 0;
+    checkboxes.forEach((checkbox) => {
+        movieID = checkbox.name;
+
+    });
+
+    console.log(movieID);
 
     const name = document.getElementById("name").value;
     const genre = document.getElementById("genre").value;
