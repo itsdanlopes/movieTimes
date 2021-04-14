@@ -78,7 +78,7 @@ function deleteMoviesFunction() {
 
 }
 
-function updateMovieFunction() {
+async function updateMovieFunction() {
 
     const checkboxes = document.querySelectorAll(`input[type="checkBox"]:checked`);
     let values = [];
@@ -94,7 +94,14 @@ function updateMovieFunction() {
     } else {
         var movieID = values[0];
 
-        getMovieObject(movieID);
+        let singleMovie = await getMovieObject(movieID);
+
+        document.getElementById("name").value = singleMovie.name;
+        document.getElementById("genre").value = singleMovie.genre;
+        document.getElementById("price").value = singleMovie.price;
+        document.getElementById("duration").value = singleMovie.duration;
+        document.getElementById("screen").value = singleMovie.screen;
+        document.getElementById("showingTime").value = singleMovie.showingTime;
 
 
     }
