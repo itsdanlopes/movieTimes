@@ -1,7 +1,5 @@
 const defaultURL = 'https://movieschedule.herokuapp.com/';
 
-// const axios = require("axios");
-
 const listOfMovies = async() => {
 
     const URL = `${defaultURL}getMovie`;
