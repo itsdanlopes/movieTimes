@@ -15,6 +15,6 @@ app.use(helmet());
 app.use(compression());
 app.use(routes);
 
-app.get('/', (req, res) => res.json('Healthy check ok'));
+app.get('/', (req, res) => res.sendfile("./views/index.html"));
 
 app.listen(port, () => console.log('App running on port ', port));
