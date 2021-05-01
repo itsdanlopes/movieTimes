@@ -16,7 +16,6 @@ app.use(compression());
 app.use(routes);
 
 app.use(express.static("./views"))
-app.use(express.static("src/controllers"))
 app.get('/', (req, res) => res.sendfile("./views/index.html"));
 
 app.listen(port, () => console.log('App running on port ', port));
